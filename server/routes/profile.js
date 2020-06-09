@@ -1,8 +1,12 @@
 const express = require('express')
 const router = express.Router()
+var mongoConn = require('../db/mongo-conn')
 
 router.get('/', (req, res) => {
-    res.send('Viewing all profiles')
+    console.log('Finding all profiles')
+    mongoConn.Profile.find(function(err, profiles) {
+        res.status(200).send(profiles)
+    })
 })
 
 

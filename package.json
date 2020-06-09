@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --output-path dist"
   },
   "private": true,
   "dependencies": {
@@ -23,8 +24,14 @@
     "@angular/platform-browser": "~9.1.1",
     "@angular/platform-browser-dynamic": "~9.1.1",
     "@angular/router": "~9.1.1",
+    "body-parser": "^1.19.0",
     "component": "^1.1.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.9.18",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
     "rxjs": "~6.5.4",
     "support": "^1.1.4",
     "tslib": "^1.10.0",
@@ -33,9 +40,9 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.1",
     "@angular/language-service": "~9.1.1",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",

@@ -1,0 +1,59 @@
+<div class="login-div">
+    <mat-card>
+
+        <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+    
+        <mat-card-content>
+          <form #loginForm="ngForm" (submit)="onLoginSubmit(loginForm)">
+
+            <div>
+                <mat-form-field>
+                    <mat-label>Email-address</mat-label>  
+                    <input
+                     matInput 
+                     placeholder="Email-address"
+                     name="email" 
+                     ngModel
+                     #email="ngModel"
+                     required>   
+                     <mat-error *ngIf="email.invalid">Please Enter Your Email!</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input 
+                    matInput type="password" 
+                    placeholder="Password"
+                    name="password" 
+                    ngModel
+                    #password="ngModel"
+                    required>
+                    <mat-error *ngIf="password.invalid">Please Enter Your Password!</mat-error>
+                </mat-form-field>
+            </div>
+            
+            <h1></h1>
+
+            <div>
+                <mat-error *ngIf="loginInvalid">Please enter credentials correctly.</mat-error>
+            </div>
+
+            <div>
+                <button mat-raised-button color="accent" type="submit">Login</button>
+            </div>
+    
+          </form>
+        </mat-card-content>
+
+        <h1></h1>
+
+        <a routerLink="/register">
+            <mat-label>New to Profile Builder? Register here</mat-label>
+        </a>  
+    
+      </mat-card>
+</div>

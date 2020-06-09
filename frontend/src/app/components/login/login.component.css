@@ -7,3 +7,11 @@ mat-card {
 mat-form-field {
     width: 80%;
 }
+  
+
+.login-formatter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

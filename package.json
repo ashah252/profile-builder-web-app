@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~9.1.1",
     "@angular/platform-browser-dynamic": "~9.1.1",
     "@angular/router": "~9.1.1",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "component": "^1.1.0",
     "cookie-parser": "^1.4.5",

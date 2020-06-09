@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       this.loginInvalid = true;
     }
 
-    this.authService.tryLogin(loginForm.value.email, loginForm.value.email)
+    this.authService.tryLogin(loginForm.value.email, loginForm.value.password)
   }
 
 }

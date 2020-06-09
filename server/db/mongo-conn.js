@@ -1,6 +1,6 @@
 const config = require('../config')
 const mongoose = require('mongoose')
-var Profile = require('./schemas/profile')
+var Login = require('./schemas/login')
 
 
 const options = {
@@ -32,5 +32,5 @@ dbconn = mongoose.connect(process.env.MONGODB_URI, options )
 
 module.exports = {
     dbconn,
-    Profile
+    Login
 }

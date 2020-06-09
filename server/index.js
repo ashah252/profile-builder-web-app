@@ -10,14 +10,13 @@ const app = express()
 const port = process.env.SERVER_PORT
 
 const apiRoutes = require('./routes/api-routes')
-var frontendDir = path.join(__dirname, '/../dist/my-website')
+var frontendDir = path.join(__dirname, '..', 'dist')
 
 if (process.env.NODE_ENV != 'test') {
   app.use(logger('dev'));
 }
 
 app.use(express.json())
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/api', apiRoutes)
 
